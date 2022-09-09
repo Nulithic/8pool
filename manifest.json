@@ -1,0 +1,20 @@
+{
+  "name": "8pool",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "permissions": ["activeTab", "storage", "scripting"],
+  "content_scripts": [
+    {
+      "run_at": "document_idle",
+      "matches": ["https://8ballpool.com/en/game*"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["*.js", "*.json"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "action": {}
+}
